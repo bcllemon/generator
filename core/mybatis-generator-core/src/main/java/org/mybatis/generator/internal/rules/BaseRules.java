@@ -63,11 +63,12 @@ public abstract class BaseRules implements Rules {
      * @return true if the element and method should be generated
      */
     public boolean generateInsert() {
-        if (isModelOnly) {
-            return false;
-        }
-        
-        return tableConfiguration.isInsertStatementEnabled();
+//        if (isModelOnly) {
+//            return false;
+//        }
+//
+//        return tableConfiguration.isInsertStatementEnabled();
+        return false;
     }
 
     /**
@@ -117,19 +118,20 @@ public abstract class BaseRules implements Rules {
      * @return true if the element and method should be generated
      */
     public boolean generateUpdateByPrimaryKeyWithoutBLOBs() {
-        if (isModelOnly) {
-            return false;
-        }
-        
-        if (ListUtilities.removeGeneratedAlwaysColumns(introspectedTable.getBaseColumns()).isEmpty()) {
-            return false;
-        }
-        
-        boolean rc = tableConfiguration.isUpdateByPrimaryKeyStatementEnabled()
-                && introspectedTable.hasPrimaryKeyColumns()
-                && introspectedTable.hasBaseColumns();
-
-        return rc;
+        return false;
+//        if (isModelOnly) {
+//            return false;
+//        }
+//
+//        if (ListUtilities.removeGeneratedAlwaysColumns(introspectedTable.getBaseColumns()).isEmpty()) {
+//            return false;
+//        }
+//
+//        boolean rc = tableConfiguration.isUpdateByPrimaryKeyStatementEnabled()
+//                && introspectedTable.hasPrimaryKeyColumns()
+//                && introspectedTable.hasBaseColumns();
+//
+//        return rc;
     }
 
     /**

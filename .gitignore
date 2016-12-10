@@ -48,3 +48,20 @@
 /core/mybatis-generator-systests-domtests/.settings
 /core/mybatis-generator-systests-domtests/target
 /.project
+
+
+
+
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+.idea
+*.iml
+.DS_STORE
+**/target/**
+**/.idea/**
+Test*.java
